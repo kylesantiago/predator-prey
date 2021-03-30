@@ -181,7 +181,7 @@ book-start-energy
 book-start-energy
 0
 50
-20.0
+10.0
 1
 1
 NIL
@@ -335,39 +335,56 @@ HORIZONTAL
 @#$#@#$#@
 ## WHAT IS IT?
 
-(a general understanding of what the model is trying to show or explain)
+This model explores the predator prey ecosystem. 
 
 ## HOW IT WORKS
 
-(what rules the agents use to create the overall behavior of the model)
+This model contains 2 agents, Books and Scholars. 
+
+In this model, books have come alive and are looking for pages scattered in the environment to maintain their energy levels. Scholars are tasked with hunting down these books and reading them to sedate the books and increase their energy to read more books. Both agents lose energey when moving, and when either run out of energy they disappear. Additionally, each agent has its own independent reproduction rate to maintain agent population. 
 
 ## HOW TO USE IT
 
-(how to use the model, including a description of each of the items in the Interface tab)
+1. Adjust slider parameters 
+2. Press the SETUP button to initialize the simulation
+3. Press the Go button to begin the simulation
+4. Monitor population sizes and plot to examine population fluctuation
 
+Parameters: 
+PAGE-RESPAWN-TIME: The time it takes for a page to spawn into the environment
+NUM-BOOKS: The initial amount of living books
+NUM-SCHOLARS: The initial amount of scholars
+BOOK-START-ENERGY: The initial amount of energy for each living book
+SCHOLAR-START-ENERGY: The initial amount of energy for each scholar
+BOOK-ENERGY-GAIN: The amount of energy gained by a living book for eating a page
+SCHOLAR-ENERGY-GAIN: The amount of energy gained by a scholar for reading a book
+BOOK-REP-RATE: The probability of a living book reproducing
+SCHOLAR-REP-RATE: The probability of a scholar reproducing
+
+If there are no more books or scholars the simulation stops.
 ## THINGS TO NOTICE
 
-(suggested things for the user to notice while running the model)
+Notice that though the amount of living books dominate the scholars, as time progresses eventually scholars population will increase and attempt to catch up to the living book population or dominate it. 
 
 ## THINGS TO TRY
 
-(suggested things for the user to try to do (move sliders, switches, etc.) with the model)
+Try modifying the parameters to see how the behavior will change.
 
 ## EXTENDING THE MODEL
 
-(suggested things to add or change in the Code tab to make the model more complicated, detailed, accurate, etc.)
+Additional parameters and more rules could drastically affect the model and show a more accurate predator and prey ecosystem
 
 ## NETLOGO FEATURES
 
-(interesting or unusual features of NetLogo that the model uses, particularly in the Code tab; or where workarounds were needed for missing features)
+Notice the use of <breeds>-here with collects all of the turtles within a caller's area
 
 ## RELATED MODELS
 
-(models in the NetLogo Models Library and elsewhere which are of related interest)
+Look at Wolf Sheep Predation for another model of similar interaction
 
 ## CREDITS AND REFERENCES
 
-(a reference to the model's URL on the web if it has one, as well as any other necessary credits, citations, and links)
+Wilensky, U. (1997). NetLogo Wolf Sheep Predation model. http://ccl.northwestern.edu/netlogo/models/WolfSheepPredation. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
 @#$#@#$#@
 default
 true
